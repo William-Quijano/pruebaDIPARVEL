@@ -12,16 +12,20 @@ import axios from "axios";
 import vueAxios from 'vue-axios'
 
 //import router
-import vueRoter from 'vue-router'
+import vueRouter from 'vue-router'
 import {routes} from './Route'
-vue.use(vueRoter)
+vue.use(vueRouter)
 vue.use(vueAxios,axios)
 
-const route = new VueRouter({
+const route = new vueRouter({
     mode:'history',
     routes:routes
 
 })
+
+// sliderbar configuration
+import VueSidebarMenuAkahon from "vue-sidebar-menu-akahon";
+vue.component('vue-sidebar-menu-akahon', VueSidebarMenuAkahon);
 
 const app = new vue({
     el:'#app',
