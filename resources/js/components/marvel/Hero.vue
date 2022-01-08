@@ -24,7 +24,14 @@ export default {
     methods: {
         viewHero() {
 
-            this.axios.get('https://gateway.marvel.com:443/v1/public/characters?ts=1000&apikey=7e352e8bb8feb633c33ddb6a147af4ee&hash=5debc99ab79da84bca51e3b827900aa6')
+            this.axios.get('https://gateway.marvel.com:443/v1/public/characters',{
+                params:{
+                    ts:'1000',
+                    apikey:'7e352e8bb8feb633c33ddb6a147af4ee',
+                    hash:'5debc99ab79da84bca51e3b827900aa6'
+
+                }
+            })
                 .then(resp => {
                     this.Heros = resp.data.results
                 })
