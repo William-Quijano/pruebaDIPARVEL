@@ -2139,32 +2139,61 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
-  },
-  mounted: function mounted() {
-    this.viewHero();
+    return {
+      pokemons: [],
+      imgUrl: "",
+      nextUrl: "",
+      currentUrl: "",
+      apiUrl: "https://pokeapi.co/api/v2/pokemon/"
+    };
   },
   methods: {
     viewHero: function viewHero() {
-      this.axios.get(' https://pokeapi.co/api/v2/pokemon'
-      /*,{
-      headers:{
-      "Access-Control-Allow-Origin": "*",
-      },
-      params:{
-      ts:'1000',
-      apikey:'7e352e8bb8feb633c33ddb6a147af4ee',
-      hash:'5debc99ab79da84bca51e3b827900aa6'
-      }
-      }*/
-      ).then(function (resp) {
-        console.log(resp.data.results);
+      var _this = this;
+
+      this.axios.get(this.currentUrl).then(function (resp) {
+        if (resp.status === 200) _this.imgUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
+        return resp;
+      }).then(function (resp) {
+        _this.nextUrl = resp.data.next;
+        resp.data.results.forEach(function (pokemon) {
+          pokemon.id = pokemon.url.split('/').filter(function (part) {
+            return !!part;
+          }).pop();
+
+          _this.pokemons.push(pokemon);
+        });
       })["catch"](function (error) {
         console.log(error);
       });
+    },
+    scrollTrigger: function scrollTrigger() {
+      var _this2 = this;
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.intersectionRatio > 0 && _this2.nextUrl) {
+            _this2.next();
+          }
+        });
+      });
+      observer.observe(this.$refs.infinitescrolltrigger);
+    },
+    next: function next() {
+      this.currentUrl = this.nextUrl;
+      this.viewHero();
     }
+  },
+  created: function created() {
+    this.currentUrl = this.apiUrl;
+    this.viewHero();
+  },
+  mounted: function mounted() {
+    this.scrollTrigger();
   }
 });
 
@@ -20935,46 +20964,47 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "div",
-        { staticClass: "d-flex justify-content-center flex-row flex-wrap" },
-        [
-          _c(
-            "div",
-            {
-              staticClass: "card",
-              staticStyle: {
-                width: "18rem",
-                "margin-left": "2em",
-                "margin-bottom": "2em",
-                "box-shadow": "10px 11px 8px",
-                "border-radius": "20%",
-              },
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "d-flex justify-content-center flex-row flex-wrap" },
+      _vm._l(_vm.pokemons, function (pokemon) {
+        return _c(
+          "div",
+          {
+            key: pokemon.id,
+            staticClass: "card",
+            staticStyle: {
+              width: "10rem",
+              "margin-left": "2em",
+              "margin-bottom": "2em",
+              "box-shadow": "10px 11px 8px",
+              "border-radius": "20%",
             },
-            [
-              _c("img", {
-                staticClass: "card-img-top",
-                staticStyle: { "border-radius": "20%" },
-                attrs: {
-                  src: "https://picsum.photos/200/300",
-                  alt: "Card image cap",
-                },
-              }),
-            ]
-          ),
-        ]
-      ),
-    ])
-  },
-]
+          },
+          [
+            _c("img", {
+              staticClass: "card-img-top",
+              staticStyle: { "border-radius": "20%" },
+              attrs: {
+                src: _vm.imgUrl + pokemon.id + ".png",
+                alt: "Card image cap",
+              },
+            }),
+          ]
+        )
+      }),
+      0
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { ref: "infinitescrolltrigger", attrs: { id: "scroll-trigger" } },
+      [_c("i", { staticClass: "fas fa-spinner fa-spin" })]
+    ),
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
