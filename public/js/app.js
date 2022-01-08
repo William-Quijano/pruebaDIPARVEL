@@ -2120,52 +2120,9 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/marvel/Hero.vue?vue&type=script&lang=js& ***!
   \******************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      Heros: []
-    };
-  },
-  mounted: function mounted() {
-    this.viewHero();
-  },
-  methods: {
-    viewHero: function viewHero() {
-      var _this = this;
-
-      var config = {
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        }
-      };
-      this.axios.get('https://gateway.marvel.com:443/v1/public/characters?apikey=7e352e8bb8feb633c33ddb6a147af4ee', config).then(function (resp) {
-        _this.Heros = resp.data.results;
-      })["catch"](function (error) {
-        console.log(error);
-      });
-    }
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\resources\\js\\components\\marvel\\Hero.vue: Unexpected token, expected \",\" (29:13)\n\n\u001b[0m \u001b[90m 27 |\u001b[39m                 headers\u001b[33m:\u001b[39m {\u001b[32m'Access-Control-Allow-Origin'\u001b[39m\u001b[33m:\u001b[39m \u001b[32m'*'\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m                             \u001b[32m\"Content-Type\"\u001b[39m\u001b[33m:\u001b[39m \u001b[32m\"application/json\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m             }\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maxios\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://gateway.marvel.com:443/v1/public/characters?apikey=7e352e8bb8feb633c33ddb6a147af4ee'\u001b[39m\u001b[33m,\u001b[39mconfig)\u001b[0m\n\u001b[0m \u001b[90m 31 |\u001b[39m                 \u001b[33m.\u001b[39mthen(resp \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m                     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[33mHeros\u001b[39m \u001b[33m=\u001b[39m resp\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mresults\u001b[0m\n    at Parser._raise (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:569:17)\n    at Parser.raiseWithData (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:562:17)\n    at Parser.raise (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:523:17)\n    at Parser.unexpected (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:3601:16)\n    at Parser.expect (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:3575:28)\n    at Parser.parseObjectLike (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:12543:14)\n    at Parser.parseExprAtom (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:11986:23)\n    at Parser.parseExprSubscripts (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:11654:23)\n    at Parser.parseUpdate (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:11634:21)\n    at Parser.parseMaybeUnary (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:11609:23)\n    at Parser.parseMaybeUnaryOrPrivate (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:11421:61)\n    at Parser.parseExprOps (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:11428:23)\n    at Parser.parseMaybeConditional (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:11398:23)\n    at Parser.parseMaybeAssign (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:11358:21)\n    at C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:11316:39\n    at Parser.allowInAnd (C:\\Users\\wdani\\Documents\\GitHub\\pruebaDIPARVEL\\node_modules\\@babel\\parser\\lib\\index.js:13226:16)");
 
 /***/ }),
 
