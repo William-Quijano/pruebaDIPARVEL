@@ -31,6 +31,12 @@ vue.component('vue-sidebar-menu-akahon', VueSidebarMenuAkahon);
 import Hero from './components/marvel/Hero.vue';
 vue.component('Hero' , Hero)
 
+//sweetalert import
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
+vue.use(VueSweetalert2)
+
 const app = new vue({
     el:'#app',
     router:route,

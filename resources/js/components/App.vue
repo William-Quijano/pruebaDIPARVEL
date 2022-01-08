@@ -8,17 +8,15 @@
             :isSearch="false"
             menuTitle="DIPARVEL"
             menu-icon="bxl-tux"
+            bgColor="#000000"
         />
     </div>
-
-
-        <Hero/>
-
+        <router-view></router-view>
     </div>
 </template>
 <script>
 import VueSidebarMenuAkahon from "vue-sidebar-menu-akahon";
-import Hero from "./marvel/Hero"
+
 
 
 export default {
@@ -34,8 +32,7 @@ export default {
     },
     mounted() {
          this.items =[
-            {link: '#',name: 'Heroe', tooltip: 'Heroe', icon:'bx-run'},
-            {link: '#',name: 'Series', tooltip: 'Series', icon:' bx-movie-play'}
+            {link: '/pokemon',name: 'pokemon', tooltip: 'Heroe', icon:'bx-run'}
              ]
     },
     methods :{
