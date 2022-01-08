@@ -15,7 +15,7 @@
 export default {
     data() {
         return {
-            Heros: []
+            Heros: [],
         }
     },
     mounted() {
@@ -39,6 +39,6 @@ export default {
                     console.log(error)
                 })
         }
-    }
+    },
 }
 </script>
