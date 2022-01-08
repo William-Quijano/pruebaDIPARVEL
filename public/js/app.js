@@ -2151,7 +2151,7 @@ __webpack_require__.r(__webpack_exports__);
     viewHero: function viewHero() {
       this.axios.get('https://gateway.marvel.com:443/v1/public/characters', {
         headers: {
-          "Access-Control-Allow-Origin": "*"
+          "Access-Control-Allow-Origin": "https://safe-beach-69351.herokuapp.com/"
         },
         params: {
           ts: '1000',
