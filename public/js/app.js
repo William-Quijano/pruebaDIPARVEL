@@ -2090,8 +2090,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'component.vue',
   components: {
-    'VueSidebarMenuAkahon': vue_sidebar_menu_akahon__WEBPACK_IMPORTED_MODULE_0__["default"],
-    'Hero': _marvel_Hero__WEBPACK_IMPORTED_MODULE_1__["default"]
+    'VueSidebarMenuAkahon': vue_sidebar_menu_akahon__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -2149,16 +2148,18 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     viewHero: function viewHero() {
-      this.axios.get('https://gateway.marvel.com:443/v1/public/characters', {
-        headers: {
-          "Access-Control-Allow-Origin": "https://safe-beach-69351.herokuapp.com/"
-        },
-        params: {
-          ts: '1000',
-          apikey: '7e352e8bb8feb633c33ddb6a147af4ee',
-          hash: '5debc99ab79da84bca51e3b827900aa6'
-        }
-      }).then(function (resp) {
+      this.axios.get(' https://pokeapi.co/api/v2/pokemon'
+      /*,{
+      headers:{
+      "Access-Control-Allow-Origin": "*",
+      },
+      params:{
+      ts:'1000',
+      apikey:'7e352e8bb8feb633c33ddb6a147af4ee',
+      hash:'5debc99ab79da84bca51e3b827900aa6'
+      }
+      }*/
+      ).then(function (resp) {
         console.log(resp.data.results);
       })["catch"](function (error) {
         console.log(error);
@@ -2180,7 +2181,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "routes": () => (/* binding */ routes)
 /* harmony export */ });
-var routes = [];
+/* harmony import */ var _components_marvel_Hero__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/marvel/Hero */ "./resources/js/components/marvel/Hero.vue");
+
+var routes = [{
+  name: 'hero.component',
+  path: '/hero',
+  component: _components_marvel_Hero__WEBPACK_IMPORTED_MODULE_0__["default"]
+}];
 
 /***/ }),
 

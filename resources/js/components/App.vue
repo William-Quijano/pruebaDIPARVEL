@@ -24,7 +24,7 @@ import Hero from "./marvel/Hero"
 export default {
 
     name: 'component.vue',
-    components: {'VueSidebarMenuAkahon':VueSidebarMenuAkahon,'Hero' : Hero},
+    components: {'VueSidebarMenuAkahon':VueSidebarMenuAkahon},
 
 
     data() {

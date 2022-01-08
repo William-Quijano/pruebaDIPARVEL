@@ -24,9 +24,9 @@ export default {
     methods: {
         viewHero() {
 
-            this.axios.get('https://gateway.marvel.com:443/v1/public/characters',{
+            this.axios.get(' https://pokeapi.co/api/v2/pokemon'/*,{
                 headers:{
-                    "Access-Control-Allow-Origin": "https://safe-beach-69351.herokuapp.com/",
+                    "Access-Control-Allow-Origin": "*",
                 },
                 params:{
                     ts:'1000',
@@ -34,7 +34,7 @@ export default {
                     hash:'5debc99ab79da84bca51e3b827900aa6'
 
                 }
-            })
+            }*/)
                 .then(resp => {
                    console.log(resp.data.results)
                 })
