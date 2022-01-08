@@ -1,5 +1,6 @@
 <template>
     <div>
+    <div>
         <VueSidebarMenuAkahon
             :menu-items="items" :profile-img="'https://picsum.photos/200/300'"
             profileName="William Quijano"
@@ -9,16 +10,23 @@
             menu-icon="bxl-tux"
         />
     </div>
-    <div>
+
+
+        <Hero/>
 
     </div>
 </template>
 <script>
 import VueSidebarMenuAkahon from "vue-sidebar-menu-akahon";
+import Hero from "./marvel/Hero"
+
 
 export default {
+
     name: 'component.vue',
-    components: {VueSidebarMenuAkahon},
+    components: {'VueSidebarMenuAkahon':VueSidebarMenuAkahon,'Hero' : Hero},
+
+
     data() {
         return {
             items : []

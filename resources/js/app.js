@@ -27,6 +27,10 @@ const route = new vueRouter({
 import VueSidebarMenuAkahon from "vue-sidebar-menu-akahon";
 vue.component('vue-sidebar-menu-akahon', VueSidebarMenuAkahon);
 
+//importacion y configuracion de componente
+import Hero from './components/marvel/Hero.vue';
+vue.component('Hero' , Hero)
+
 const app = new vue({
     el:'#app',
     router:route,
