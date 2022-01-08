@@ -2150,6 +2150,9 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     viewHero: function viewHero() {
       this.axios.get('https://gateway.marvel.com:443/v1/public/characters', {
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        },
         params: {
           ts: '1000',
           apikey: '7e352e8bb8feb633c33ddb6a147af4ee',
