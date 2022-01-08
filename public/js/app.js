@@ -2153,7 +2153,12 @@ __webpack_require__.r(__webpack_exports__);
     viewHero: function viewHero() {
       var _this = this;
 
-      this.axios.get('https://gateway.marvel.com:443/v1/public/characters?apikey=7e352e8bb8feb633c33ddb6a147af4ee').then(function (resp) {
+      var config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
+      };
+      this.axios.get('https://gateway.marvel.com:443/v1/public/characters?apikey=7e352e8bb8feb633c33ddb6a147af4ee', config).then(function (resp) {
         _this.Heros = resp.data.results;
       })["catch"](function (error) {
         console.log(error);

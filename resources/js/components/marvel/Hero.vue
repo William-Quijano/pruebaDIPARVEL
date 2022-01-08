@@ -23,8 +23,10 @@ export default {
     },
     methods: {
         viewHero() {
-
-            this.axios.get('https://gateway.marvel.com:443/v1/public/characters?apikey=7e352e8bb8feb633c33ddb6a147af4ee')
+            const config = {
+                headers: {'Access-Control-Allow-Origin': '*'}
+            };
+            this.axios.get('https://gateway.marvel.com:443/v1/public/characters?apikey=7e352e8bb8feb633c33ddb6a147af4ee',config)
                 .then(resp => {
                     this.Heros = resp.data.results
                 })
