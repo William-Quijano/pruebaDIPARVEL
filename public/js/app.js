@@ -21114,7 +21114,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass: "d-flex justify-content-center flex-row flex-wrap",
-          staticStyle: { "background-color": "#ff6600", height: "100%" },
+          staticStyle: { "background-color": "#ff6600", height: "100vh" },
         },
         [
           _c("img", {
@@ -21234,8 +21234,8 @@ var render = function () {
               key: pokemon.id,
               staticClass: "card",
               staticStyle: {
-                width: "10rem",
-                "margin-left": "2em",
+                width: "8rem",
+                "margin-left": "1em",
                 "margin-bottom": "2em",
                 "box-shadow": "10px 11px 8px",
                 "border-radius": "15%",
@@ -21257,7 +21257,7 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("h4", { staticClass: "text-dark text-center" }, [
+              _c("h6", { staticClass: "text-dark text-center" }, [
                 _vm._v(_vm._s(pokemon.name)),
               ]),
             ]

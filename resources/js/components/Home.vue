@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="d-flex justify-content-center flex-row flex-wrap" style="background-color: #ff6600;height: 100%">
+        <div class="d-flex justify-content-center flex-row flex-wrap" style="background-color: #ff6600;height: 100vh">
             <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
                 width="100%" style="margin-bottom: 5em" alt="">

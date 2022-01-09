@@ -1,13 +1,13 @@
 <template>
     <div>
 
-        <div class="d-flex justify-content-center flex-row flex-wrap" style="background-color: #ff6600"  >
+        <div class="d-flex justify-content-center flex-row flex-wrap" style="background-color: #ff6600;"  >
 
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" width="100%" style="margin-bottom: 5em" alt="">
             <hr>
-            <div class="card" v-for="pokemon in pokemons" :key="pokemon.id" v-on:click="showDetail(pokemon.id)"  style="width: 10rem;margin-left: 2em;margin-bottom: 2em;box-shadow: 10px 11px 8px;border-radius: 15%;cursor: pointer ">
+            <div class="card" v-for="pokemon in pokemons" :key="pokemon.id" v-on:click="showDetail(pokemon.id)"  style="width: 8rem;margin-left: 1em;margin-bottom: 2em;box-shadow: 10px 11px 8px;border-radius: 15%;cursor: pointer ">
                 <img class="card-img-top" :src="imgUrl + pokemon.id + '.png'" style="border-radius: 20%" alt="Card image cap">
-                <h4 class="text-dark text-center">{{pokemon.name}}</h4>
+                <h6 class="text-dark text-center">{{pokemon.name}}</h6>
             </div>
 
 
