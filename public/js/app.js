@@ -2095,6 +2095,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.items = [{
+      link: '/',
+      name: 'home',
+      tooltip: 'home',
+      icon: 'bx-home'
+    }, {
       link: '/pokemon',
       name: 'pokemon',
       tooltip: 'Heroe',
@@ -21114,7 +21119,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass: "d-flex justify-content-center flex-row flex-wrap",
-          staticStyle: { "background-color": "#ff6600", height: "100vh" },
+          staticStyle: { "background-color": "#ff6600", height: "auto" },
         },
         [
           _c("img", {

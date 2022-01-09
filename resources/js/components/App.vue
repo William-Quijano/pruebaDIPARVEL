@@ -32,7 +32,9 @@ export default {
     },
     mounted() {
          this.items =[
-            {link: '/pokemon',name: 'pokemon', tooltip: 'Heroe', icon:'bx-run'}
+             {link: '/',name: 'home', tooltip: 'home', icon:'bx-home'},
+            {link: '/pokemon',name: 'pokemon', tooltip: 'Heroe', icon:'bx-run'},
+
              ]
     },
     methods :{
